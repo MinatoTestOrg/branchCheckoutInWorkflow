@@ -1,0 +1,16 @@
+name: dev checkout
+
+on: workflow_dispatch
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo...
+      uses: actions/checkout@v3
+      with:
+        ref: development
+
+    - name: Printing directory content...
+      run: ls -l
