@@ -1,0 +1,14 @@
+name: main checkout
+
+on: workflow_dispatch
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo...
+      uses: actions/checkout@v3
+
+    - name: Displaying content...
+      run: ls -l
